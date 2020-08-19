@@ -4,6 +4,53 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <context-param>
+        <param-name>emailOfWebMaster</param-name>
+        <param-value>123456@qq.com</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>CounterServlet</servlet-name>
+        <servlet-class>mypack.CounterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CounterServlet</servlet-name>
+        <url-pattern>/counter</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>contextTester</servlet-name>
+        <servlet-class>mypack.ContextTesterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>contextTester</servlet-name>
+        <url-pattern>/contextTester</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>lifeInit</servlet-name>
+        <servlet-class>mypack.LifeServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>lifeInit</servlet-name>
+        <url-pattern>/lifeInit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>life</servlet-name>
+        <servlet-class>mypack.LifeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>life</servlet-name>
+        <url-pattern>/life</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>dispatcher</servlet-name>
         <servlet-class>mypack.DispatcherServlet</servlet-class>
