@@ -1,8 +1,7 @@
 package mypack;
-import javax.servlet.* ;
-import javax.servlet.http.*;
-import java.io.* ;
-import java.util.*;
+
+import javax.servlet.*;
+import java.io.IOException;
 
 
 public class DispatcherServlet extends GenericServlet {

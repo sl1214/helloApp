@@ -82,6 +82,35 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>downloadServlet</servlet-name>
+        <servlet-class>mypack.DownloadServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>downloadServlet</servlet-name>
+        <url-pattern>/downloadServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>upload</servlet-name>
+        <servlet-class>mypack.UploadServlet</servlet-class>
+        <init-param>
+            <param-name>filePath</param-name>
+            <param-value>store</param-value>
+        </init-param>
+        <init-param>
+            <param-name>tempFilePath</param-name>
+            <param-value>temp</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>upload</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
         <servlet-name>font</servlet-name>
         <servlet-class>mypack.FontServlet</servlet-class>
         <init-param>
@@ -94,12 +123,145 @@
         </init-param>
     </servlet>
 
+
     <servlet-mapping>
         <servlet-name>font</servlet-name>
         <url-pattern>/fontServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>imageServlet</servlet-name>
+        <servlet-class>mypack.ImageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>imageServlet</servlet-name>
+        <url-pattern>/image</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cookieServlet</servlet-name>
+        <servlet-class>mypack.CookieServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>cookieServlet</servlet-name>
+        <url-pattern>/cookie</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cookie1Servlet</servlet-name>
+        <servlet-class>mypack.Cookie1Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>cookie1Servlet</servlet-name>
+        <url-pattern>/cookie1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>dirTesterServlet</servlet-name>
+        <servlet-class>mypack.DirTesterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>dirTesterServlet</servlet-name>
+        <url-pattern>/dirTester</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>checkServlet</servlet-name>
+        <servlet-class>mypack.CheckServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>checkServlet</servlet-name>
+        <url-pattern>/check</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>outputServlet</servlet-name>
+        <servlet-class>mypack.OutputServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>outputServlet</servlet-name>
+        <url-pattern>/output</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>mainServlet</servlet-name>
+        <servlet-class>mypack.MainServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mainServlet</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>greetServlet</servlet-name>
+        <servlet-class>mypack.GreetServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>greetServlet</servlet-name>
+        <url-pattern>/greet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>check1Servlet</servlet-name>
+        <servlet-class>mypack.Check1Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>check1Servlet</servlet-name>
+        <url-pattern>/check1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>output1Servlet</servlet-name>
+        <servlet-class>mypack.Output1Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>output1Servlet</servlet-name>
+        <url-pattern>/output1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>crossServlet</servlet-name>
+        <servlet-class>mypack.CrossServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>crossServlet</servlet-name>
+        <url-pattern>/cross</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>adderServlet</servlet-name>
+        <servlet-class>mypack.AdderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>adderServlet</servlet-name>
+        <url-pattern>/adder</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>adderServlet</servlet-name>
+        <url-pattern>/adder2</url-pattern>
+    </servlet-mapping>
+
     <welcome-file-list>
         <welcome-file>login.html</welcome-file>
     </welcome-file-list>
+
+    <resource-ref>
+        <description>Db Connection</description>
+        <res-ref-name>jdbc/TestDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
 </web-app>

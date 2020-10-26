@@ -22,7 +22,7 @@ public class LifeServlet extends GenericServlet {
         System.out.println(name+">destroy():servlet has destroy "+destoryVar+" time");
     }
 
-    @Override
+
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         serviceVar++;
         System.out.println(name+">service():servlet has service "+serviceVar+" time");
